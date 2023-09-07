@@ -26,9 +26,9 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.cyan,
       body: Center(
         child: Text(
-          "Covid_19",
+          "Covid_19\nHealthcare",
           style: TextStyle(
-              fontSize: 40.0, color: Colors.black, fontFamily: "Quando"),
+              fontSize: 40.0, color: Colors.white, fontFamily: "Quando"),
           textAlign: TextAlign.center,
         ),
       ),
