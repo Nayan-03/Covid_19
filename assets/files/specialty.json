@@ -1,0 +1,53 @@
+{
+    "specialty": [
+        {
+            "id": 1,
+            "image": "assets/images/shape.png",
+            "name": "Neurology",
+            "num": 2029,
+            "occupation": "Doctors"
+
+        },
+        
+        {
+            "id": 2,
+            "image": "assets/images/shape.png",
+            "name": "Neurology",
+            "num": 2029,
+            "occupation": "Doctors"
+        },
+
+        {
+            "id": 3,
+            "image": "assets/images/shape.png",
+            "name": "Neurology",
+            "num": 2029,
+            "occupation": "Doctors"
+        },
+
+        {
+            "id": 4,
+            "image": "assets/images/shape.png",
+            "name": "Neurology",
+            "num": 2029,
+            "occupation": "Doctors"
+        },
+
+        {
+            "id": 5,
+            "image": "assets/images/shape.png",
+            "name": "Neurology",
+            "num": 2029,
+            "occupation": "Doctors"
+        },
+
+        {
+            "id": 6,
+            "image": "assets/images/shape.png",
+            "name": "Neurology",
+            "num": 2029,
+            "occupation": "Doctors"
+        }
+        
+    ]
+}
