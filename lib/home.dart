@@ -58,49 +58,34 @@ class _HomepageState extends State<Homepage> {
               height: 463.0,
               width: 360.0,
               decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20.0, left: 20.0),
-                    child: Text(
-                      
-                      "Covid-19\nHealthcare",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                      
-                          fontSize: 36.0, fontWeight: FontWeight.w500,),
-                    ),
+                  color: const Color.fromRGBO(62, 100, 255, 1),
+                  borderRadius: BorderRadius.circular(25)),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, top: 20.0),
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Covid-19\nHealthcare",
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 36.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "\nBook your next online\nappointments",
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            )
-            // Container(
-            //   height: 300,
-            //   color: Colors.red,
-            //   alignment: Alignment.bottomLeft,
-            //   child: Column(children: [
-            //     const Text("Put your Text Here!!!!"),
-            //     Container(
-            //       width: 360,
-            //       height: 230,
-            //       color: Colors.blue,
-            //       child: const Align(
-            //         alignment: Alignment.center,
-            //         child: Text(
-            //           'Car or sport car',
-            //           maxLines: 3,
-            //           textAlign: TextAlign.center,
-            //           style: TextStyle(
-            //             fontSize: 20,
-            //           ),
-            //         ),
-            //       ),
-            //     ),
-            //   ]),
-            // ),
+            ),
           ],
         ),
       ),
