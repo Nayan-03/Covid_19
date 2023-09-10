@@ -1,0 +1,76 @@
+{
+    "doctor": [
+        {
+            "id": 1,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. Bellamy N",
+            "specialty": "Viralogist",
+            "star": "⭐️ 4.5",
+            "view": "(135 reviews)"
+        },
+        
+        {
+            "id": 2,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. Mensha T",
+            "specialty": "Oncologists",
+            "star": "⭐️ 4.3",
+            "view": "(130 reviews)"
+        },
+
+        {
+            "id": 3,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. Klimisch J",
+            "specialty": "Surgeon",
+            "star": "⭐️ 4.5",
+            "view": "(135 reviews)"
+        },
+
+        {
+            "id": 4,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. Martinez K",
+            "specialty": "Pediatrician",
+            "star": "⭐️ 4.3",
+            "view": "(130 reviews)"
+        },
+
+        {
+            "id": 5,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. Marc M",
+            "specialty": "Rheumatologists",
+            "star": "⭐️ 4.3",
+            "view": "(130 reviews)"
+        },
+
+        {
+            "id": 6,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. O,Boyle J",
+            "specialty": "Radiologists",
+            "star": "⭐️ 4.5",
+            "view": "(135 reviews)"
+        },
+
+        {
+            "id": 7,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. Marc M",
+            "specialty": "Rheumatologists",
+            "star": "⭐️ 4.3",
+            "view": "(130 reviews)"
+        },
+
+        {
+            "id": 8,
+            "image": "assets/images/doctor.jpg",
+            "name": "Dr. O,Boyle J",
+            "specialty": "Radiologists",
+            "star": "⭐️ 4.5",
+            "view": "(135 reviews)"
+        }
+        
+    ]
+}

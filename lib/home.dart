@@ -49,8 +49,8 @@ class _HomepageState extends State<Homepage> {
                     child: Text(
                       "Welcome, Toluwani",
                       style: GoogleFonts.poppins(
-                        fontSize: 15,
-                        color: Colors.black,
+                        fontSize: 15.0,
+                        color: const Color.fromRGBO(34, 43, 69, 1),
                         fontWeight: FontWeight.w400,
                       ),
                     ),
