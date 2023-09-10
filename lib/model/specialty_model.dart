@@ -2,9 +2,9 @@ class SpecialtyModel {
   static List<Specialty> specialty = [
     Specialty(
       id: 1,
-      image: "assets/images/shape.png",
+      image: "assets/images/brain.jpg",
       name: "Neurology",
-      num: 2029,
+      num: "2029",
       occupation: "Doctors",
     ),
   ];
@@ -14,7 +14,7 @@ class Specialty {
   final int id;
   final String image;
   final String name;
-  final int num;
+  final String num;
   final String occupation;
 
   Specialty({

@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Covid-19',
-        theme: ThemeData(
-            //scaffoldBackgroundColor: Colors.white,
-            primarySwatch: Colors.blue),
+        theme: ThemeData(primarySwatch: Colors.blue),
         initialRoute: MyRoutes.homeRoute,
         routes: {
           "/": (context) => const SplashScreen(),

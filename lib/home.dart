@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:core';
 
 import 'package:covid_19/model/specialty_model.dart';
 import 'package:covid_19/widget/specialty_widget.dart';
@@ -29,14 +30,6 @@ class _HomepageState extends State<Homepage> {
         .map<Specialty>((specialty) => Specialty.formMap(specialty))
         .toList();
     setState(() {});
-    // final naturaljson =
-    //     await rootBundle.loadString("assets/files/natural.json");
-    // final decodedData = jsonDecode(naturaljson);
-    // var naturalData = decodedData["natural"];
-    // NaturalModel.natural = List.from(naturalData)
-    //     .map<Natural>((natural) => Natural.formMap(natural))
-    //     .toList();
-    // setState(() {});
   }
 
   @override
@@ -63,31 +56,29 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                   Row(
-                    //mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 30.0, left: 140.0),
                         child: IconButton(
-                            splashRadius: 1,
-                            onPressed: () {},
-                            icon: const Icon(Icons.calendar_month)),
+                          splashRadius: 1,
+                          onPressed: () {},
+                          icon: const Icon(Icons.calendar_month),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 30.0),
                         child: IconButton(
-                            splashRadius: 1,
-                            onPressed: () {},
-                            icon: const Icon(Icons.more_vert)),
+                          splashRadius: 1,
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_vert),
+                        ),
                       ),
                     ],
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 15.0,
-              ),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0),
+                padding: const EdgeInsets.only(left: 27.0, top: 15.0),
                 child: Container(
                   height: 463.0,
                   width: 360.0,
@@ -153,10 +144,9 @@ class _HomepageState extends State<Homepage> {
                   height: 80.0,
                   width: 360.0,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.cyan
-                      //color: Color.fromRGBO(107, 119, 154, 0.05),
-                      ),
+                    borderRadius: BorderRadius.circular(20),
+                    color: const Color.fromRGBO(107, 119, 154, 0.05),
+                  ),
                   child: Column(
                     children: [
                       ListTile(
@@ -177,8 +167,15 @@ class _HomepageState extends State<Homepage> {
                             height: 40.0,
                             width: 40.0,
                             decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(10.0)),
+                              boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 1.0,
+                                  color: Color.fromRGBO(0, 0, 0, 0.15),
+                                ),
+                              ],
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
                             child: IconButton(
                               onPressed: () {},
                               icon: const Icon(
@@ -203,38 +200,33 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0),
+                padding: const EdgeInsets.only(left: 27.0, top: 20.0),
                 child: Text(
                   "Specialty 😷",
                   style: GoogleFonts.poppins(
                     fontSize: 18.0,
                     fontWeight: FontWeight.w500,
-                    color: Color.fromRGBO(34, 43, 69, 1),
+                    color: const Color.fromRGBO(34, 43, 69, 1),
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0),
-                child: Container(
+                padding:
+                    const EdgeInsets.only(top: 20.0, left: 27.0, bottom: 20.0),
+                child: SizedBox(
                   height: 133.0,
-                  width: 114.0,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0),
-                      color: Colors.blue
-                      //color: Color.fromRGBO(107, 119, 154, 0.05),
-                      ),
+                  width: MediaQuery.of(context).size.width,
                   child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      //shrinkWrap: true,
-                      itemCount: SpecialtyModel.specialty.length,
-                      itemBuilder: (context, index) {
-                        return SpecialtyWidget(
-                          specialty: SpecialtyModel.specialty[index],
-                        );
-                      }),
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    itemCount: SpecialtyModel.specialty.length,
+                    itemBuilder: (context, index) {
+                      return SpecialtyWidget(
+                        specialty: SpecialtyModel.specialty[index],
+                      );
+                    },
+                  ),
                 ),
               ),
             ],
