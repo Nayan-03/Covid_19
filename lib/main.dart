@@ -1,6 +1,7 @@
-import 'package:covid_19/doctor.dart';
-import 'package:covid_19/home.dart';
-import 'package:covid_19/splash.dart';
+import 'package:covid_19/pages/doctor.dart';
+import 'package:covid_19/pages/doctor_detail.dart';
+import 'package:covid_19/pages/home.dart';
+import 'package:covid_19/pages/splash.dart';
 import 'package:covid_19/utills/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +18,13 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Covid-19',
         theme: ThemeData(primarySwatch: Colors.blue),
-        initialRoute: MyRoutes.doctorRoute,
+        initialRoute: MyRoutes.doctordetailRoute,
         routes: {
-          "/": (context) => const Doctorpage(),
+          //"/": (context) => const SplashScreen(),
+          MyRoutes.splashroute: (context) => const SplashScreen(),
           MyRoutes.homeRoute: (context) => const Homepage(),
           MyRoutes.doctorRoute: (context) => const Doctorpage(),
+          MyRoutes.doctordetailRoute: (context) => const DoctorDetailpage(),
         });
   }
 }

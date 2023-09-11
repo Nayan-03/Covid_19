@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:covid_19/model/doctor_model.dart';
+import 'package:covid_19/utills/routes.dart';
 import 'package:covid_19/widget/doctor_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -50,21 +51,27 @@ class _DoctorpageState extends State<Doctorpage> {
                       height: 40.0,
                       width: 40.0,
                       decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromRGBO(241, 244, 247, 1),
+                        ),
                         boxShadow: const [
                           BoxShadow(
                             blurRadius: 1.0,
                             color: Color.fromRGBO(0, 0, 0, 0.15),
                           ),
                         ],
-                        color: Colors.blue,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, MyRoutes.homeRoute);
+                        },
                         icon: const Icon(
                           Icons.arrow_back_sharp,
                           color: Color.fromRGBO(34, 43, 69, 1),
                         ),
+                        splashRadius: 1,
                       ),
                     ),
                   ),
@@ -85,13 +92,16 @@ class _DoctorpageState extends State<Doctorpage> {
                       height: 40.0,
                       width: 40.0,
                       decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromRGBO(241, 244, 247, 1),
+                        ),
                         boxShadow: const [
                           BoxShadow(
                             blurRadius: 1.0,
                             color: Color.fromRGBO(0, 0, 0, 0.15),
                           ),
                         ],
-                        color: Colors.blue,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       child: IconButton(
@@ -100,6 +110,7 @@ class _DoctorpageState extends State<Doctorpage> {
                           Icons.arrow_back_sharp,
                           color: Color.fromRGBO(34, 43, 69, 1),
                         ),
+                        splashRadius: 1,
                       ),
                     ),
                   ),
@@ -132,7 +143,8 @@ class _DoctorpageState extends State<Doctorpage> {
                     physics: const AlwaysScrollableScrollPhysics(),
                     itemCount: DoctorModel.doctor.length,
                     shrinkWrap: true,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       crossAxisSpacing: 20.0,
                       mainAxisSpacing: 20.0,

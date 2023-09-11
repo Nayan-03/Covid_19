@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:core';
 
 import 'package:covid_19/model/specialty_model.dart';
+import 'package:covid_19/utills/routes.dart';
 import 'package:covid_19/widget/specialty_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -59,10 +60,30 @@ class _HomepageState extends State<Homepage> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 30.0, left: 140.0),
-                        child: IconButton(
-                          splashRadius: 1,
-                          onPressed: () {},
-                          icon: const Icon(Icons.calendar_month),
+                        child: Container(
+                          height: 40.0,
+                          width: 40.0,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: const Color.fromRGBO(241, 244, 247, 1),
+                            ),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 1.0,
+                                color: Color.fromRGBO(0, 0, 0, 0.15),
+                              ),
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.calendar_month,
+                              color: Color.fromRGBO(34, 43, 69, 1),
+                            ),
+                            splashRadius: 1,
+                          ),
                         ),
                       ),
                       Padding(
@@ -177,11 +198,15 @@ class _HomepageState extends State<Homepage> {
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             child: IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, MyRoutes.doctorRoute);
+                              },
                               icon: const Icon(
                                 Icons.arrow_forward_sharp,
                                 color: Color.fromRGBO(34, 43, 69, 1),
                               ),
+                              splashRadius: 1,
                             ),
                           ),
                         ),
