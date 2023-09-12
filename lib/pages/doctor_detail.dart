@@ -43,83 +43,86 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
   
 //////////////////////// for row 3 container///////////////////
   Widget card(String number, catagory, image, color1) {
-    return Stack(
-      children: [
-        Positioned(
-          child: Container(
-            height: 130.0,
-            width: 110.0,
-            decoration: BoxDecoration(
-              boxShadow: const [
-                BoxShadow(
-                  blurRadius: 80.0,
-                  color: Color.fromRGBO(107, 119, 154, 0.15),
-                ),
-              ],
-              borderRadius: BorderRadius.circular(20.0),
-              color: Colors.white,
-            ),
-            child: Column(
-              children: [
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 73.0,
-                      left: 3.0,
-                    ),
-                    child: Text(
-                      number,
-                      style: GoogleFonts.poppins(
-                        fontSize: 17.0,
-                        fontWeight: FontWeight.w500,
-                        color: const Color.fromRGBO(34, 43, 69, 1),
+    return Padding(
+      padding: const EdgeInsets.only(left: 10.0),
+      child: Stack(
+        children: [
+          Positioned(
+            child: Container(
+              height: 130.0,
+              width: 106.0,
+              decoration: BoxDecoration(
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 80.0,
+                    color: Color.fromRGBO(107, 119, 154, 0.15),
+                  ),
+                ],
+                borderRadius: BorderRadius.circular(20.0),
+                color: Colors.white,
+              ),
+              child: Column(
+                children: [
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        top: 73.0,
+                        left: 3.0,
+                      ),
+                      child: Text(
+                        number,
+                        style: GoogleFonts.poppins(
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.w500,
+                          color: const Color.fromRGBO(34, 43, 69, 1),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Center(
-                  child: Text(
-                    catagory,
-                    style: GoogleFonts.poppins(
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.w400,
-                      color: const Color.fromRGBO(107, 119, 154, 1),
+                  Center(
+                    child: Text(
+                      catagory,
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.w400,
+                        color: const Color.fromRGBO(107, 119, 154, 1),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        Positioned(
-          left: 30.0,
-          child: Container(
-            height: 63.0,
-            width: 49.0,
-            decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(15.0),
-                  bottomRight: Radius.circular(15.0),
-                ),
-                color: color1),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 25.0),
-              child: Image.asset(
-                image,
-                height: 22.0,
-                width: 24.0,
+                ],
               ),
             ),
           ),
-        ),
-      ],
+          Positioned(
+            left: 30.0,
+            child: Container(
+              height: 63.0,
+              width: 49.0,
+              decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(15.0),
+                    bottomRight: Radius.circular(15.0),
+                  ),
+                  color: color1),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 25.0),
+                child: Image.asset(
+                  image,
+                  height: 22.0,
+                  width: 24.0,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
 //////////////////////// for 3 colum container social media////////////////////////
   Widget commu(String communication, text, commuimage, color2) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12.0),
+      padding: const EdgeInsets.only(top: 12.0, ),
       child: Stack(
         children: [
           Positioned(
@@ -285,9 +288,9 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                          left: 27.0, top: 23.0, right: 27.0),
+                          left: 20.0, top: 23.0, right: 20.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           card(number[0], catagory[0], image[0], color1[0]),
                           card(number[1], catagory[1], image[1], color1[1]),
@@ -299,7 +302,7 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, top: 15.0),
+                padding: const EdgeInsets.only(left: 27.0, top: 15.0, right: 27.0),
                 child: SizedBox(
                   height: 150.0,
                   width: 360.0,
@@ -394,7 +397,7 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.only(top: 42.0, left: 25.0, bottom: 30.0),
+                    const EdgeInsets.only(top: 42.0, left: 25.0, right: 27.0, bottom: 30.0),
                 child: Container(
                   height: 60.0,
                   width: 360.0,

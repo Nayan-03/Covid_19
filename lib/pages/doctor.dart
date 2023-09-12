@@ -40,6 +40,7 @@ class _DoctorpageState extends State<Doctorpage> {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Column(
+            
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
@@ -76,7 +77,7 @@ class _DoctorpageState extends State<Doctorpage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 48.0, left: 105.0),
+                    padding: const EdgeInsets.only(top: 48.0, left: 95.0),
                     child: Text(
                       "Doctors",
                       style: GoogleFonts.poppins(
@@ -87,7 +88,7 @@ class _DoctorpageState extends State<Doctorpage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 38.0, left: 105.0),
+                    padding: const EdgeInsets.only(top: 38.0, left: 95.0),
                     child: Container(
                       height: 40.0,
                       width: 40.0,
@@ -117,7 +118,7 @@ class _DoctorpageState extends State<Doctorpage> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, top: 28.0),
+                padding: const EdgeInsets.only(left: 20.0, top: 28.0, right: 20.0),
                 child: Container(
                   width: 360.0,
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),

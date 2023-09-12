@@ -74,7 +74,7 @@ class _DoctorWidgetState extends State<DoctorWidget> {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 35.0, top: 3.0),
+                      padding: const EdgeInsets.only(left: 30.0, top: 3.0),
                       child: Text(
                         widget.doctor.star,
                         style: GoogleFonts.poppins(
@@ -86,7 +86,7 @@ class _DoctorWidgetState extends State<DoctorWidget> {
                     ),
                     const Spacer(),
                     Padding(
-                      padding: const EdgeInsets.only(right: 35.0, top: 3.0),
+                      padding: const EdgeInsets.only(right: 30.0, top: 3.0),
                       child: Text(
                         widget.doctor.view,
                         style: GoogleFonts.poppins(

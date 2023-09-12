@@ -59,7 +59,7 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 30.0, left: 140.0),
+                        padding: const EdgeInsets.only(top: 30.0, left: 130.0),
                         child: Container(
                           height: 40.0,
                           width: 40.0,
@@ -87,7 +87,9 @@ class _HomepageState extends State<Homepage> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 30.0),
+                        padding: const EdgeInsets.only(
+                          top: 30.0,
+                        ),
                         child: IconButton(
                           splashRadius: 1,
                           onPressed: () {},
@@ -99,7 +101,8 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, top: 15.0),
+                padding:
+                    const EdgeInsets.only(left: 27.0, top: 15.0, right: 27.0),
                 child: Container(
                   height: 463.0,
                   width: 360.0,
@@ -160,7 +163,7 @@ class _HomepageState extends State<Homepage> {
                 height: 20.0,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0),
+                padding: const EdgeInsets.only(left: 27.0, right: 27.0),
                 child: Container(
                   height: 80.0,
                   width: 360.0,
