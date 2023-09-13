@@ -44,7 +44,8 @@ class _DoctorpageState extends State<Doctorpage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                //mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 38.0, left: 27.0),
@@ -78,12 +79,14 @@ class _DoctorpageState extends State<Doctorpage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 48.0, left: 95.0),
-                    child: Text(
-                      "Doctors",
-                      style: GoogleFonts.poppins(
-                        fontSize: 18.0,
-                        color: const Color.fromRGBO(34, 43, 69, 1),
-                        fontWeight: FontWeight.w400,
+                    child: Center(
+                      child: Text(
+                        "Doctors",
+                        style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: const Color.fromRGBO(34, 43, 69, 1),
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),
