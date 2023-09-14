@@ -1,4 +1,5 @@
 import 'package:covid_19/utills/routes.dart';
+import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -11,6 +12,8 @@ class NewAppointment extends StatefulWidget {
 }
 
 class _NewAppointmentState extends State<NewAppointment> {
+  DateTime selectedDate = DateTime.now();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,7 +23,7 @@ class _NewAppointmentState extends State<NewAppointment> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              //mainAxisAlignment: MainAxisAlignment.start,
+              
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
@@ -69,32 +72,56 @@ class _NewAppointmentState extends State<NewAppointment> {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 27.0, top: 15.0),
-              child: SizedBox(
-                height: 133.0,
-                width: 440.0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          DateFormat.yMMM().format(DateTime.now()),
-                          style: GoogleFonts.poppins(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w500,
-                              color: const Color.fromRGBO(34, 43, 69, 1)),
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.arrow_drop_down_sharp))
-                      ],
-                    ),
-                  ],
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 27.0, top: 10.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        DateFormat.yMMM().format(DateTime.now()),
+                        style: GoogleFonts.poppins(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w500,
+                            color: const Color.fromRGBO(34, 43, 69, 1)),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.arrow_drop_down_sharp),
+                        splashRadius: 1.0,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            )
+                Padding(
+                  padding: const EdgeInsets.only(left: 27.0, top: 10.0),
+                  child: DatePicker(
+                    DateTime.now(),
+                    height: 100.0,
+                    width: 80.0,
+                    initialSelectedDate: DateTime.now(),
+                    selectionColor: const Color.fromRGBO(62, 100, 255, 1),
+                    selectedTextColor: Colors.white,
+                    dateTextStyle: GoogleFonts.poppins(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.w500,
+                        color: const Color.fromRGBO(107, 119, 154, 1)),
+                    dayTextStyle: GoogleFonts.poppins(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w400,
+                        color: const Color.fromRGBO(107, 119, 154, 1)),
+                    monthTextStyle: GoogleFonts.poppins(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w400,
+                        color: const Color.fromRGBO(107, 119, 154, 1)),
+                    onDateChange: (date) {
+                      selectedDate = date;
+                    },
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
