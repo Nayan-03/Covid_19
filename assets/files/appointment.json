@@ -1,0 +1,94 @@
+{
+    "appointment": [
+        {
+            "id": 1,
+            "time": "09:00 AM",
+            "isSelected": false
+        },
+
+        {
+            "id": 2,
+            "time": "09:30 AM",
+            "isSelected": false
+        },
+
+        {
+            "id": 3,
+            "time": "10:00 AM",
+            "isSelected": false
+        },
+
+        {
+            "id": 4,
+            "time": "10:30 AM",
+            "isSelected": false
+        },
+
+        {
+            "id": 5,
+            "time": "11:00 AM",
+            "isSelected": false
+        },
+
+        {
+            "id": 6,
+            "time": "12:00 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 7,
+            "time": "12:30 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 8,
+            "time": "1:30 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 9,
+            "time": "02:00 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 10,
+            "time": "02:30 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 11,
+            "time": "03:00 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 12,
+            "time": "04:30 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 13,
+            "time": "05:00 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 14,
+            "time": "05:30 PM",
+            "isSelected": false
+        },
+
+        {
+            "id": 15,
+            "time": "06:00 PM",
+            "isSelected": false
+        }
+
+    ]
+}
