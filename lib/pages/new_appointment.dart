@@ -19,7 +19,15 @@ class NewAppointment extends StatefulWidget {
 class _NewAppointmentState extends State<NewAppointment> {
   DateTime selectedDate = DateTime.now();
 
+  String dropdownValue = 'Age';
+
   bool visibilitycolor = true;
+  List<String> heading = [
+    "Full name",
+    "Age",
+    "Gender",
+    "Write your problem",
+  ];
 
   @override
   void initState() {
@@ -190,21 +198,23 @@ class _NewAppointmentState extends State<NewAppointment> {
                 ),
               ),
               const SizedBox(height: 18.0),
-              Padding(
-                padding: const EdgeInsets.only(left: 27.0),
-                child: Text(
-                  "Full name",
-                  style: GoogleFonts.poppins(
-                    fontSize: 14.0,
-                    color: const Color.fromRGBO(107, 119, 154, 1),
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
+              text(heading[0]),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 27.0),
+              //   child: Text(
+              //     "Full name",
+              //     style: GoogleFonts.poppins(
+              //       fontSize: 14.0,
+              //       color: const Color.fromRGBO(107, 119, 154, 1),
+              //       fontWeight: FontWeight.w400,
+              //     ),
+              //   ),
+              // ),
               const SizedBox(height: 8.0),
               Padding(
                 padding: const EdgeInsets.only(left: 27.0, right: 27.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.name,
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
                     filled: true,
@@ -223,21 +233,69 @@ class _NewAppointmentState extends State<NewAppointment> {
                 ),
               ),
               const SizedBox(height: 18.0),
-              Padding(
-                padding: const EdgeInsets.only(left: 27.0),
-                child: Text(
-                  "Age",
-                  style: GoogleFonts.poppins(
-                    fontSize: 14.0,
-                    color: const Color.fromRGBO(107, 119, 154, 1),
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
+              text(heading[1]),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 27.0),
+              //   child: Text(
+              //     "Age",
+              //     style: GoogleFonts.poppins(
+              //       fontSize: 14.0,
+              //       color: const Color.fromRGBO(107, 119, 154, 1),
+              //       fontWeight: FontWeight.w400,
+              //     ),
+              //   ),
+              // ),
               const SizedBox(height: 8.0),
               Padding(
                 padding: const EdgeInsets.only(left: 27.0, right: 27.0),
-                child: TextFormField(
+                child:
+                    // DropdownButtonFormField(
+                    //   decoration: InputDecoration(
+                    //     filled: true,
+                    //     fillColor: const Color.fromRGBO(107, 119, 154, 0.05),
+                    //     enabledBorder: OutlineInputBorder(
+                    //       borderSide: const BorderSide(
+                    //           color: Color.fromRGBO(107, 119, 154, 0.05)),
+                    //       borderRadius: BorderRadius.circular(10),
+                    //     ),
+                    //     focusedBorder: OutlineInputBorder(
+                    //       borderSide: const BorderSide(
+                    //           color: Color.fromRGBO(107, 119, 154, 0.05)),
+                    //       borderRadius: BorderRadius.circular(10),
+                    //     ),
+                    //   ),
+                    //   dropdownColor: const Color.fromRGBO(107, 119, 154, 0.05),
+                    //   value: dropdownValue,
+                    //   onChanged: (String? newValue) {
+                    //     setState(() {
+                    //       dropdownValue = newValue!;
+                    //     });
+                    //   },
+                    //   items: <String>[
+                    //     '16 - 20',
+                    //     '21 - 25',
+                    //     '26 - 30',
+                    //     '31 - 35',
+                    //     '36 - 40',
+                    //     '41 - 50',
+                    //     '51 - 60'
+                    //   ].map<DropdownMenuItem<String>>((String value) {
+                    //     return DropdownMenuItem<String>(
+                    //       value: value,
+                    //       child: Text(
+                    //         value,
+                    //         style: GoogleFonts.poppins(
+                    //           fontSize: 16.0,
+                    //           color: const Color.fromRGBO(34, 43, 69, 1),
+                    //           fontWeight: FontWeight.w500,
+                    //         ),
+                    //       ),
+                    //     );
+                    //   }).toList(),
+                    //
+
+                    TextFormField(
+                  keyboardType: TextInputType.number,
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
                     filled: true,
@@ -259,20 +317,58 @@ class _NewAppointmentState extends State<NewAppointment> {
                       splashRadius: 1.0,
                     ),
                   ),
+
+                  // DropdownButton(
+                  //     items: [
+                  //       DropdownMenuItem(
+                  //         value: "16 - 20",
+                  //         child: textfield(age[0]),
+                  //       ),
+                  //       DropdownMenuItem(
+                  //         value: "21 - 25",
+                  //         child: textfield(age[1]),
+                  //       ),
+                  //       DropdownMenuItem(
+                  //         value: "26 - 30",
+                  //         child: textfield(age[2]),
+                  //       ),
+                  //       DropdownMenuItem(
+                  //         value: "31 - 35",
+                  //         child: textfield(age[3]),
+                  //       ),
+                  //       DropdownMenuItem(
+                  //         value: "36 - 40",
+                  //         child: textfield(age[4]),
+                  //       ),
+                  //       DropdownMenuItem(
+                  //         value: "41 - 50",
+                  //         child: textfield(age[5]),
+                  //       ),
+                  //       DropdownMenuItem(
+                  //         value: "51 - 60",
+                  //         child: textfield(age[6]),
+                  //       ),
+                  //     ],
+                  //     onChanged: (value) {
+                  //       setState(() {
+                  //         value = value;
+                  //       });
+                  //     })
                 ),
               ),
               const SizedBox(height: 18.0),
-              Padding(
-                padding: const EdgeInsets.only(left: 27.0),
-                child: Text(
-                  "Gender",
-                  style: GoogleFonts.poppins(
-                    fontSize: 14.0,
-                    color: const Color.fromRGBO(107, 119, 154, 1),
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
+              text(heading[2]),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 27.0),
+              //   child: Text(
+              //     "Gender",
+              //     style: GoogleFonts.poppins(
+              //       fontSize: 14.0,
+              //       color: const Color.fromRGBO(107, 119, 154, 1),
+              //       fontWeight: FontWeight.w400,
+              //     ),
+              //   ),
+              // ),
               const SizedBox(height: 8.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -357,6 +453,70 @@ class _NewAppointmentState extends State<NewAppointment> {
                   ),
                 ],
               ),
+              const SizedBox(height: 18.0),
+              text(heading[3]),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 27.0),
+              //   child: Text(
+              //     "Write your problem",
+              //     style: GoogleFonts.poppins(
+              //       fontSize: 14.0,
+              //       color: const Color.fromRGBO(107, 119, 154, 1),
+              //       fontWeight: FontWeight.w400,
+              //     ),
+              //   ),
+              // ),
+              const SizedBox(height: 8.0),
+              Padding(
+                padding: const EdgeInsets.only(left: 27.0, right: 27.0),
+                child: TextField(
+                  keyboardType: TextInputType.text,
+                  cursorColor: Colors.black,
+                  decoration: InputDecoration(
+                    hintText: "Write your Problem",
+                    hintStyle: GoogleFonts.poppins(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w300,
+                        color: const Color.fromRGBO(107, 119, 154, 1)),
+                    filled: true,
+                    fillColor: const Color.fromRGBO(107, 119, 154, 0.05),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                          color: Color.fromRGBO(107, 119, 154, 0.05)),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                          color: Color.fromRGBO(107, 119, 154, 0.05)),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  maxLines: 6,
+                ),
+              ),
+              const SizedBox(height: 62.0),
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 25.0, right: 27.0, bottom: 30.0),
+                child: Container(
+                  height: 60.0,
+                  width: 360.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    color: const Color.fromRGBO(62, 100, 255, 1),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Set Appointment",
+                      style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -364,3 +524,43 @@ class _NewAppointmentState extends State<NewAppointment> {
     );
   }
 }
+
+Widget text(String heading) {
+  return Padding(
+    padding: const EdgeInsets.only(left: 27.0),
+    child: Text(
+      heading,
+      style: GoogleFonts.poppins(
+        fontSize: 14.0,
+        color: const Color.fromRGBO(107, 119, 154, 1),
+        fontWeight: FontWeight.w400,
+      ),
+    ),
+  );
+}
+
+// Widget textfield(String age) {
+//   return Center(
+//     child: Text(
+//       age,
+//       style: GoogleFonts.poppins(
+//         color: const Color.fromRGBO(34, 43, 69, 1),
+//         fontSize: 16.0,
+//         fontWeight: FontWeight.w400,
+//       ),
+//     ),
+//   );
+// }
+
+// Widget DropdownMenuItem(BuildContext context){
+//   return Center(
+//     child: Text(
+//       "15 -"
+//       style: GoogleFonts.poppins(
+//         color: const Color.fromRGBO(34, 43, 69, 1),
+//         fontSize: 16.0,
+//         fontWeight: FontWeight.w400,
+//       ),
+//     ),
+//   );
+// }
