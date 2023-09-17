@@ -19,14 +19,36 @@ class NewAppointment extends StatefulWidget {
 class _NewAppointmentState extends State<NewAppointment> {
   DateTime selectedDate = DateTime.now();
 
-  String dropdownValue = 'Age';
+  String defaultValue = "";
 
   bool visibilitycolor = true;
-  List<String> heading = [
+
+  List<String> h1 = ["Available time", "Patient Details"];
+  List<String> h2 = [
     "Full name",
     "Age",
     "Gender",
     "Write your problem",
+  ];
+
+  List listItem = [
+    '16 - 20',
+    '21 - 25',
+    '26 - 30',
+    '31 - 35',
+    '36 - 40',
+    '41 - 50',
+    '51 - 60'
+  ];
+
+  List dropDownListData = [
+    {"title": "16 - 20", "value": "1"},
+    {"title": "21 - 25", "value": "2"},
+    {"title": "26 - 30", "value": "3"},
+    {"title": "31 - 35", "value": "4"},
+    {"title": "36 - 40", "value": "5"},
+    {"title": "41 - 50", "value": "6"},
+    {"title": "51 - 60", "value": "7"}
   ];
 
   @override
@@ -157,17 +179,7 @@ class _NewAppointmentState extends State<NewAppointment> {
                 ],
               ),
               const SizedBox(height: 27.0),
-              Padding(
-                padding: const EdgeInsets.only(left: 27.0),
-                child: Text(
-                  "Available time",
-                  style: GoogleFonts.poppins(
-                    fontSize: 18.0,
-                    color: const Color.fromRGBO(34, 43, 69, 1),
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
+              heading1(h1[0]),
               const SizedBox(height: 21.0),
               Padding(
                 padding: const EdgeInsets.only(left: 27.0),
@@ -186,30 +198,10 @@ class _NewAppointmentState extends State<NewAppointment> {
                 ),
               ),
               const SizedBox(height: 32.0),
-              Padding(
-                padding: const EdgeInsets.only(left: 27.0),
-                child: Text(
-                  "Patient Details",
-                  style: GoogleFonts.poppins(
-                    fontSize: 18.0,
-                    color: const Color.fromRGBO(34, 43, 69, 1),
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
+              heading1(h1[1]),
               const SizedBox(height: 18.0),
-              text(heading[0]),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 27.0),
-              //   child: Text(
-              //     "Full name",
-              //     style: GoogleFonts.poppins(
-              //       fontSize: 14.0,
-              //       color: const Color.fromRGBO(107, 119, 154, 1),
-              //       fontWeight: FontWeight.w400,
-              //     ),
-              //   ),
-              // ),
+              heading2(h2[0]),
+
               const SizedBox(height: 8.0),
               Padding(
                 padding: const EdgeInsets.only(left: 27.0, right: 27.0),
@@ -233,142 +225,201 @@ class _NewAppointmentState extends State<NewAppointment> {
                 ),
               ),
               const SizedBox(height: 18.0),
-              text(heading[1]),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 27.0),
-              //   child: Text(
-              //     "Age",
-              //     style: GoogleFonts.poppins(
-              //       fontSize: 14.0,
-              //       color: const Color.fromRGBO(107, 119, 154, 1),
-              //       fontWeight: FontWeight.w400,
-              //     ),
-              //   ),
-              // ),
+              heading2(h2[1]),
+
               const SizedBox(height: 8.0),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, right: 27.0),
-                child:
-                    // DropdownButtonFormField(
-                    //   decoration: InputDecoration(
-                    //     filled: true,
-                    //     fillColor: const Color.fromRGBO(107, 119, 154, 0.05),
-                    //     enabledBorder: OutlineInputBorder(
-                    //       borderSide: const BorderSide(
-                    //           color: Color.fromRGBO(107, 119, 154, 0.05)),
-                    //       borderRadius: BorderRadius.circular(10),
-                    //     ),
-                    //     focusedBorder: OutlineInputBorder(
-                    //       borderSide: const BorderSide(
-                    //           color: Color.fromRGBO(107, 119, 154, 0.05)),
-                    //       borderRadius: BorderRadius.circular(10),
-                    //     ),
-                    //   ),
-                    //   dropdownColor: const Color.fromRGBO(107, 119, 154, 0.05),
-                    //   value: dropdownValue,
-                    //   onChanged: (String? newValue) {
-                    //     setState(() {
-                    //       dropdownValue = newValue!;
-                    //     });
-                    //   },
-                    //   items: <String>[
-                    //     '16 - 20',
-                    //     '21 - 25',
-                    //     '26 - 30',
-                    //     '31 - 35',
-                    //     '36 - 40',
-                    //     '41 - 50',
-                    //     '51 - 60'
-                    //   ].map<DropdownMenuItem<String>>((String value) {
-                    //     return DropdownMenuItem<String>(
-                    //       value: value,
-                    //       child: Text(
-                    //         value,
-                    //         style: GoogleFonts.poppins(
-                    //           fontSize: 16.0,
-                    //           color: const Color.fromRGBO(34, 43, 69, 1),
-                    //           fontWeight: FontWeight.w500,
-                    //         ),
-                    //       ),
-                    //     );
-                    //   }).toList(),
-                    //
+                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  child:
 
-                    TextFormField(
-                  keyboardType: TextInputType.number,
-                  cursorColor: Colors.black,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: const Color.fromRGBO(107, 119, 154, 0.05),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                          color: Color.fromRGBO(107, 119, 154, 0.05)),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                          color: Color.fromRGBO(107, 119, 154, 0.05)),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_drop_down_sharp),
-                      color: const Color.fromRGBO(107, 119, 154, 1),
-                      splashRadius: 1.0,
-                    ),
-                  ),
+                      // ListView(
+                      //   scrollDirection: Axis.vertical,
+                      //   children: [
+                      //     // const SizedBox(
+                      //     //   height: 20,
+                      //     // ),
+                      //     InputDecorator(
+                      //       decoration: InputDecoration(
+                      //         border: OutlineInputBorder(
+                      //             borderRadius: BorderRadius.circular(15.0)),
+                      //         contentPadding: const EdgeInsets.all(10),
+                      //       ),
+                      //       child: DropdownButtonHideUnderline(
+                      //         child: DropdownButton<String>(
+                      //             isDense: true,
+                      //             value: defaultValue,
+                      //             //isExpanded: true,
+                      //             //menuMaxHeight: 350,
+                      //             items: [
+                      //               const DropdownMenuItem(
+                      //                   value: "",
+                      //                   child: Text(
+                      //                     "Select Course",
+                      //                   )),
+                      //               ...dropDownListData
+                      //                   .map<DropdownMenuItem<String>>((data) {
+                      //                 return DropdownMenuItem(
+                      //                     value: data['value'],
+                      //                     child: Text(data['title']));
+                      //               }).toList(),
+                      //             ],
+                      //             onChanged: (value) {
+                      //               // print("selected Value $value");
+                      //               setState(() {
+                      //                 defaultValue = value!;
+                      //               });
+                      //             }),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
+                      //),
+                      // ListView(
+                      //   children: [
+                      //         DropdownButton<String>(
+                      //         value: defaultValue,
+                      //         isDense: true,
+                      //         isExpanded: true,
+                      //         items: [
+                      //           DropdownMenuItem(
+                      //             value: "",
+                      //             child: Text(
+                      //               "Select Your Age",
+                      //               style: GoogleFonts.poppins(
+                      //                 fontSize: 16.0,
+                      //                 color: const Color.fromRGBO(34, 43, 69, 1),
+                      //                 fontWeight: FontWeight.w400,
+                      //               ),
+                      //             ),
 
-                  // DropdownButton(
-                  //     items: [
-                  //       DropdownMenuItem(
-                  //         value: "16 - 20",
-                  //         child: textfield(age[0]),
-                  //       ),
-                  //       DropdownMenuItem(
-                  //         value: "21 - 25",
-                  //         child: textfield(age[1]),
-                  //       ),
-                  //       DropdownMenuItem(
-                  //         value: "26 - 30",
-                  //         child: textfield(age[2]),
-                  //       ),
-                  //       DropdownMenuItem(
-                  //         value: "31 - 35",
-                  //         child: textfield(age[3]),
-                  //       ),
-                  //       DropdownMenuItem(
-                  //         value: "36 - 40",
-                  //         child: textfield(age[4]),
-                  //       ),
-                  //       DropdownMenuItem(
-                  //         value: "41 - 50",
-                  //         child: textfield(age[5]),
-                  //       ),
-                  //       DropdownMenuItem(
-                  //         value: "51 - 60",
-                  //         child: textfield(age[6]),
-                  //       ),
-                  //     ],
-                  //     onChanged: (value) {
-                  //       setState(() {
-                  //         value = value;
-                  //       });
-                  //     })
-                ),
-              ),
-              const SizedBox(height: 18.0),
-              text(heading[2]),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 27.0),
-              //   child: Text(
-              //     "Gender",
-              //     style: GoogleFonts.poppins(
-              //       fontSize: 14.0,
-              //       color: const Color.fromRGBO(107, 119, 154, 1),
-              //       fontWeight: FontWeight.w400,
-              //     ),
-              //   ),
+                      //           ),
+                      //           dropDownListData.map<DropdownMenuItem<String>>((data) {
+                      //         return DropdownMenuItem(
+                      //             value: data['value'],
+                      //             child: Text(data['title']));
+                      //     }).toList(),
+                      // dropdownListData.map<DropdownMenuItem<String>>((data) {
+                      //   return DropdownMenuItem(value: data['value'], child: Text(data['title']));
+                      // }).toList(),
+                      //         ],
+                      //         onChanged: (value) {
+                      //           setState(() {
+                      //             defaultValue = value!;
+                      //           });
+                      //         }),
+                      //       ],
+                      // )
+                      // DropdownButtonFormField(
+                      //   decoration: InputDecoration(
+                      //     filled: true,
+                      //     fillColor: const Color.fromRGBO(107, 119, 154, 0.05),
+                      //     enabledBorder: OutlineInputBorder(
+                      //       borderSide: const BorderSide(
+                      //           color: Color.fromRGBO(107, 119, 154, 0.05)),
+                      //       borderRadius: BorderRadius.circular(10),
+                      //     ),
+                      //     focusedBorder: OutlineInputBorder(
+                      //       borderSide: const BorderSide(
+                      //           color: Color.fromRGBO(107, 119, 154, 0.05)),
+                      //       borderRadius: BorderRadius.circular(10),
+                      //     ),
+                      //   ),
+                      //   dropdownColor: const Color.fromRGBO(107, 119, 154, 0.05),
+                      //   value: dropdownValue,
+                      //   onChanged: (String? newValue) {
+                      //     setState(() {
+                      //       dropdownValue = newValue!;
+                      //     });
+                      //   },
+                      //   items: <String>[
+                      //     '16 - 20',
+                      //     '21 - 25',
+                      //     '26 - 30',
+                      //     '31 - 35',
+                      //     '36 - 40',
+                      //     '41 - 50',
+                      //     '51 - 60'
+                      //   ].map<DropdownMenuItem<String>>((String value) {
+                      //     return DropdownMenuItem<String>(
+                      //       value: value,
+                      //       child: Text(
+                      //         value,
+                      //         style: GoogleFonts.poppins(
+                      //           fontSize: 16.0,
+                      //           color: const Color.fromRGBO(34, 43, 69, 1),
+                      //           fontWeight: FontWeight.w500,
+                      //         ),
+                      //       ),
+                      //     );
+                      //   }).toList(),
+                      //
+
+                      TextFormField(
+                    keyboardType: TextInputType.number,
+                    cursorColor: Colors.black,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: const Color.fromRGBO(107, 119, 154, 0.05),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(107, 119, 154, 0.05)),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(107, 119, 154, 0.05)),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.arrow_drop_down_sharp),
+                        color: const Color.fromRGBO(107, 119, 154, 1),
+                        splashRadius: 1.0,
+                      ),
+                    ),
+                  )),
+
+              // DropdownButton(
+              //     items: [
+              //       DropdownMenuItem(
+              //         value: "16 - 20",
+              //         child: textfield(age[0]),
+              //       ),
+              //       DropdownMenuItem(
+              //         value: "21 - 25",
+              //         child: textfield(age[1]),
+              //       ),
+              //       DropdownMenuItem(
+              //         value: "26 - 30",
+              //         child: textfield(age[2]),
+              //       ),
+              //       DropdownMenuItem(
+              //         value: "31 - 35",
+              //         child: textfield(age[3]),
+              //       ),
+              //       DropdownMenuItem(
+              //         value: "36 - 40",
+              //         child: textfield(age[4]),
+              //       ),
+              //       DropdownMenuItem(
+              //         value: "41 - 50",
+              //         child: textfield(age[5]),
+              //       ),
+              //       DropdownMenuItem(
+              //         value: "51 - 60",
+              //         child: textfield(age[6]),
+              //       ),
+              //     ],
+              //     onChanged: (value) {
+              //       setState(() {
+              //         value = value;
+              //       });
+              //     })
+              // ],
               // ),
+              const SizedBox(height: 18.0),
+              heading2(h2[2]),
+
               const SizedBox(height: 8.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -454,18 +505,8 @@ class _NewAppointmentState extends State<NewAppointment> {
                 ],
               ),
               const SizedBox(height: 18.0),
-              text(heading[3]),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 27.0),
-              //   child: Text(
-              //     "Write your problem",
-              //     style: GoogleFonts.poppins(
-              //       fontSize: 14.0,
-              //       color: const Color.fromRGBO(107, 119, 154, 1),
-              //       fontWeight: FontWeight.w400,
-              //     ),
-              //   ),
-              // ),
+              heading2(h2[3]),
+
               const SizedBox(height: 8.0),
               Padding(
                 padding: const EdgeInsets.only(left: 27.0, right: 27.0),
@@ -525,11 +566,11 @@ class _NewAppointmentState extends State<NewAppointment> {
   }
 }
 
-Widget text(String heading) {
+Widget heading2(String h2) {
   return Padding(
     padding: const EdgeInsets.only(left: 27.0),
     child: Text(
-      heading,
+      h2,
       style: GoogleFonts.poppins(
         fontSize: 14.0,
         color: const Color.fromRGBO(107, 119, 154, 1),
@@ -539,6 +580,19 @@ Widget text(String heading) {
   );
 }
 
+Widget heading1(String h1) {
+  return Padding(
+    padding: const EdgeInsets.only(left: 27.0),
+    child: Text(
+      h1,
+      style: GoogleFonts.poppins(
+        fontSize: 18.0,
+        color: const Color.fromRGBO(34, 43, 69, 1),
+        fontWeight: FontWeight.w500,
+      ),
+    ),
+  );
+}
 // Widget textfield(String age) {
 //   return Center(
 //     child: Text(
