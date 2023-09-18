@@ -1,3 +1,4 @@
+import 'package:covid_19/pages/chatpage.dart';
 import 'package:covid_19/pages/doctor.dart';
 import 'package:covid_19/pages/doctor_detail.dart';
 import 'package:covid_19/pages/home.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Covid-19',
         theme: ThemeData(primarySwatch: Colors.blue),
-        initialRoute: MyRoutes.newappointmentRoute,
+        initialRoute: MyRoutes.chatpageRoute,
         routes: {
          // "/": (context) => const SplashScreen(),
           MyRoutes.splashroute: (context) => const SplashScreen(),
@@ -27,6 +28,8 @@ class MyApp extends StatelessWidget {
           MyRoutes.doctorRoute: (context) => const Doctorpage(),
           MyRoutes.doctordetailRoute: (context) => const DoctorDetailpage(),
           MyRoutes.newappointmentRoute: (context) => const NewAppointment(),
+          MyRoutes.chatpageRoute: (context) => const Chatpage(),
+      
         });
   }
 }

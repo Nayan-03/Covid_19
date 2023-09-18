@@ -4,5 +4,6 @@ class MyRoutes {
   static String doctorRoute = "/doctor";
   static String doctordetailRoute = "/doctordetail";
   static String newappointmentRoute = "/new_appointment";
+  static String chatpageRoute = "/chatpage";
   
 }
