@@ -1,3 +1,4 @@
+import 'package:covid_19/model/chat_model.dart';
 import 'package:covid_19/utills/routes.dart';
 import 'package:covid_19/widget/chat_widget.dart';
 import 'package:flutter/material.dart';
@@ -139,9 +140,73 @@ class _ChatpageState extends State<Chatpage> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 40.0, left: 27.0, right: 27.0, bottom: 30.0),
-                child: ListView.builder(itemBuilder: (context, index) => const ChatWidget(),),
-              )
+                padding: const EdgeInsets.only(
+                    top: 40.0, left: 27.0, right: 27.0, bottom: 30.0),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  itemCount: ChatModel.chat.length,
+                  itemBuilder: (context, index) => ChatWidget(
+                    chat: ChatModel.chat[index],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        bottomSheet: Container(
+          height: 68.0,
+          decoration: const BoxDecoration(
+            color: Color.fromRGBO(241, 244, 247, 1),
+            boxShadow: [
+              BoxShadow(
+                color: Color.fromRGBO(241, 244, 247, 1),
+                spreadRadius: 2,
+                blurRadius: 10.0,
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 27.0),
+                child: Icon(
+                  Icons.add,
+                  size: 22.0,
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 13.0, top: 12.0, bottom: 12.0),
+                child: TextFormField(
+                  keyboardType: TextInputType.text,
+                  cursorColor: Colors.black,
+                  decoration: InputDecoration(
+                    hintText: "Write a message…",
+                    hintStyle: GoogleFonts.poppins(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w300,
+                      color: const Color.fromRGBO(107, 119, 154, 1),
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 20.0),
+                child: Icon(
+                  Icons.mic,
+                ),
+              ),
             ],
           ),
         ),

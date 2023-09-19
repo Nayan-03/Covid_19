@@ -40,7 +40,6 @@ class _DoctorpageState extends State<Doctorpage> {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Column(
-            
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
@@ -121,7 +120,8 @@ class _DoctorpageState extends State<Doctorpage> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20.0, top: 28.0, right: 20.0),
+                padding:
+                    const EdgeInsets.only(left: 20.0, top: 28.0, right: 20.0),
                 child: Container(
                   width: 360.0,
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -144,19 +144,19 @@ class _DoctorpageState extends State<Doctorpage> {
                 padding: const EdgeInsets.only(
                     top: 20.0, left: 27.0, right: 27.0, bottom: 20.0),
                 child: GridView.builder(
-                    physics: const AlwaysScrollableScrollPhysics(),
-                    itemCount: DoctorModel.doctor.length,
-                    shrinkWrap: true,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 20.0,
-                      mainAxisSpacing: 20.0,
-                      mainAxisExtent: 199.0,
-                    ),
-                    itemBuilder: (context, index) {
-                      return DoctorWidget(doctor: DoctorModel.doctor[index]);
-                    }),
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  itemCount: DoctorModel.doctor.length,
+                  shrinkWrap: true,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 20.0,
+                    mainAxisSpacing: 20.0,
+                    mainAxisExtent: 199.0,
+                  ),
+                  itemBuilder: (context, index) => DoctorWidget(
+                    doctor: DoctorModel.doctor[index],
+                  ),
+                ),
               ),
             ],
           ),

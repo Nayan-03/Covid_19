@@ -249,11 +249,9 @@ class _HomepageState extends State<Homepage> {
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemCount: SpecialtyModel.specialty.length,
-                    itemBuilder: (context, index) {
-                      return SpecialtyWidget(
+                    itemBuilder: (context, index) =>SpecialtyWidget(
                         specialty: SpecialtyModel.specialty[index],
-                      );
-                    },
+                      ),
                   ),
                 ),
               ),

@@ -3,38 +3,32 @@
         {
             "id": 1,
             "message": "Hello!",
-            "sender": "hii",
-            "timestamp": "2023-09-15T10:30:00Z"
+            "sender": "hii"
         },
         {
             "id": 2,
             "message": "How are you?",
-            "sender": "I'm fine.",
-            "timestamp": "2023-09-15T10:31:00Z"
+            "sender": "I'm fine."
         },
         {
             "id": 3,
             "message": "I'm also fine",
-            "sender": " and you?",
-            "timestamp": "2023-09-15T10:31:00Z"
+            "sender": " and you?"
         },
         {
             "id": 4,
             "message": "Where are you from?",
-            "sender": "from Surat.",
-            "timestamp": "2023-09-15T10:31:00Z"
+            "sender": "from Surat."
         },
         {
             "id": 5,
             "message": "What is your Name?",
-            "sender": " I'm from Ahmdabad.",
-            "timestamp": "2023-09-15T10:31:00Z"
+            "sender": " I'm from Ahmdabad."
         },
         {
             "id": 6,
             "message": "and me Milan.",
-            "sender": "Nayan.",
-            "timestamp": "2023-09-15T10:31:00Z"
+            "sender": "Nayan."
         }
     ]
 }
