@@ -18,20 +18,22 @@ class _ChatWidgetState extends State<ChatWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(right: 27.0, left: 100.0),
+          padding: const EdgeInsets.only(right: 80.0),
           child: ClipPath(
             clipper: ThreeRoundedEdgesMessageClipper(MessageType.send),
             child: Container(
               padding: const EdgeInsets.all(20.0),
               decoration: const BoxDecoration(
-                color: Color.fromRGBO(62, 100, 255, 1),
+                color: Color.fromRGBO(241, 244, 247, 1),
+                //
               ),
               child: Text(
                 widget.chat.message,
                 style: GoogleFonts.poppins(
                   fontSize: 14.0,
                   fontWeight: FontWeight.w400,
-                  color: Colors.white,
+                  color: const Color.fromRGBO(107, 119, 154, 1),
+                  //
                 ),
               ),
               // Text(
@@ -46,23 +48,23 @@ class _ChatWidgetState extends State<ChatWidget> {
           ),
         ),
         Container(
-          alignment: Alignment.centerLeft,
+          alignment: Alignment.centerRight,
           child: Padding(
-            padding: const EdgeInsets.only(top: 20.0, right: 100.0),
+            padding: const EdgeInsets.only(top: 20.0, left: 80.0),
             child: ClipPath(
-              clipper: ThreeRoundedEdgesMessageClipper(MessageType.receive),
+              clipper: ThreeRoundedEdgesMessageClipper(MessageType.send),
               child: Container(
                 padding: const EdgeInsets.only(
                     left: 20.0, top: 10.0, bottom: 25.0, right: 20.0),
                 decoration: const BoxDecoration(
-                  color: Color.fromRGBO(241, 244, 247, 1),
+                  color: Color.fromRGBO(62, 100, 255, 1),
                 ),
                 child: Text(
                   widget.chat.sender,
                   style: GoogleFonts.poppins(
                     fontSize: 14.0,
                     fontWeight: FontWeight.w400,
-                    color: const Color.fromRGBO(107, 119, 154, 1),
+                    color: Colors.white,
                   ),
                 ),
                 // Text(

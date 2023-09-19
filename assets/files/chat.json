@@ -12,8 +12,8 @@
         },
         {
             "id": 3,
-            "message": "I'm also fine",
-            "sender": " and you?"
+            "message": "hello, doctor, i believe i have the coronavirus as i am experiencing mild symptoms, what do i do?",
+            "sender": "I’m here for you, don’t worry. What symptoms are you experiencing?"
         },
         {
             "id": 4,

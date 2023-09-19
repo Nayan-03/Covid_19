@@ -539,20 +539,24 @@ class _NewAppointmentState extends State<NewAppointment> {
               Padding(
                 padding: const EdgeInsets.only(
                     left: 25.0, right: 27.0, bottom: 30.0),
-                child: Container(
-                  height: 60.0,
-                  width: 360.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: const Color.fromRGBO(62, 100, 255, 1),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Set Appointment",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w400,
+                child: InkWell(
+                  onTap: () =>
+                      Navigator.pushNamed(context, MyRoutes.chatpageRoute),
+                  child: Container(
+                    height: 60.0,
+                    width: 360.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: const Color.fromRGBO(62, 100, 255, 1),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Set Appointment",
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),

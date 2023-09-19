@@ -4,7 +4,17 @@ class ChatModel {
       id: 1,
       message: "Hello!",
       sender: "hii",
-    )
+    ),
+    Chat(
+      id: 2,
+      message: "How are you?",
+      sender: "I'm fine.",
+    ),
+    // Chat(
+    //   id: 3,
+    //   message: "hello, doctor, i believe i have the coronavirus as i am experiencing mild symptoms, what do i do?",
+    //   sender: "I’m here for you, don’t worry. What symptoms are you experiencing?",
+    // )
   ];
 }
 

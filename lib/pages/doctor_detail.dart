@@ -40,7 +40,7 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
     const Color.fromRGBO(122, 206, 250, 0.15),
     const Color.fromRGBO(247, 196, 128, 0.15)
   ];
-  
+
 //////////////////////// for row 3 container///////////////////
   Widget card(String number, catagory, image, color1) {
     return Padding(
@@ -122,7 +122,9 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
 //////////////////////// for 3 colum container social media////////////////////////
   Widget commu(String communication, text, commuimage, color2) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12.0, ),
+      padding: const EdgeInsets.only(
+        top: 12.0,
+      ),
       child: Stack(
         children: [
           Positioned(
@@ -302,7 +304,8 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, top: 15.0, right: 27.0),
+                padding:
+                    const EdgeInsets.only(left: 27.0, top: 15.0, right: 27.0),
                 child: SizedBox(
                   height: 150.0,
                   width: 360.0,
@@ -396,22 +399,26 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.only(top: 42.0, left: 25.0, right: 27.0, bottom: 30.0),
-                child: Container(
-                  height: 60.0,
-                  width: 360.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: const Color.fromRGBO(62, 100, 255, 1),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Book Appointment",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w400,
+                padding: const EdgeInsets.only(
+                    top: 42.0, left: 25.0, right: 27.0, bottom: 30.0),
+                child: InkWell(
+                  onTap: () => Navigator.pushNamed(
+                      context, MyRoutes.newappointmentRoute),
+                  child: Container(
+                    height: 60.0,
+                    width: 360.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: const Color.fromRGBO(62, 100, 255, 1),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Book Appointment",
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),
