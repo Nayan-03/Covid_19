@@ -229,7 +229,7 @@ class _NewAppointmentState extends State<NewAppointment> {
 
               const SizedBox(height: 8.0),
               Padding(
-                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  padding: const EdgeInsets.only(left: 27.0, right: 27.0),
                   child:
 
                       // ListView(

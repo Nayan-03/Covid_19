@@ -68,7 +68,7 @@ class _ChatpageState extends State<Chatpage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 48.0, left: 10.0),
+                  padding: const EdgeInsets.only(top: 48.0, left: 15.0),
                   child: Center(
                     child: Text(
                       "Dr. Bellamy Nich…",
@@ -81,7 +81,7 @@ class _ChatpageState extends State<Chatpage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 38.0, left: 37.0),
+                  padding: const EdgeInsets.only(top: 38.0, left: 10.0),
                   child: Container(
                     height: 40.0,
                     width: 40.0,
@@ -173,7 +173,7 @@ class _ChatpageState extends State<Chatpage> {
                         onPressed: () {},
                         icon: const Icon(
                           Icons.add,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         splashRadius: 1,
                       ),
@@ -183,7 +183,7 @@ class _ChatpageState extends State<Chatpage> {
                     padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
                     child: Container(
                       alignment: Alignment.centerRight,
-                      width: 290.0,
+                      width: 270.0,
                       child: TextFormField(
                         keyboardType: TextInputType.text,
                         style: GoogleFonts.poppins(
@@ -216,7 +216,7 @@ class _ChatpageState extends State<Chatpage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 5.0, right: 10.0),
+                    padding: const EdgeInsets.only( right: 10.0),
                     child: IconButton(
                       onPressed: () {},
                       icon: const Icon(
