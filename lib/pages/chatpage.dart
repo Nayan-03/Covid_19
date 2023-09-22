@@ -17,6 +17,133 @@ class _ChatpageState extends State<Chatpage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
+        // appBar: AppBar(
+        //   elevation: 0,
+        //   toolbarHeight: 70.0,
+        //   centerTitle: true,
+        //   automaticallyImplyLeading: false,
+        //   backgroundColor: Colors.white,
+        //   leading: Padding(
+        //     padding: const EdgeInsets.only(top: 20.0, bottom: 10.0, left: 17.0),
+        //     child: Container(
+        //       height: 40.0,
+        //       width: 40.0,
+        //       decoration: BoxDecoration(
+        //         border: Border.all(
+        //           color: const Color.fromRGBO(241, 244, 247, 1),
+        //         ),
+        //         boxShadow: const [
+        //           BoxShadow(
+        //             blurRadius: 1.0,
+        //             color: Color.fromRGBO(0, 0, 0, 0.15),
+        //           ),
+        //         ],
+        //         color: Colors.white,
+        //         borderRadius: BorderRadius.circular(10.0),
+        //       ),
+        //       child: IconButton(
+        //         onPressed: () {
+        //           Navigator.pushNamed(context, MyRoutes.newappointmentRoute);
+        //         },
+        //         icon: const Icon(
+        //           Icons.arrow_back_sharp,
+        //           color: Color.fromRGBO(34, 43, 69, 1),
+        //         ),
+        //         splashRadius: 1,
+        //       ),
+        //     ),
+        //   ),
+        //   title: Row(
+        //     children: [
+        //       Padding(
+        //         padding:
+        //             const EdgeInsets.only(top: 20.0, bottom: 10.0, right: 10.0),
+        //         child: ClipOval(
+        //           child: SizedBox.fromSize(
+        //             size: const Size.fromRadius(20.0),
+        //             child: Image.asset(
+        //               "assets/images/doctor.jpg",
+        //               fit: BoxFit.cover,
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.only(top: 10.0),
+        //         child: Center(
+        //           child: Text(
+        //             "Dr. Bellamy Nich…",
+        //             style: GoogleFonts.poppins(
+        //               fontSize: 18.0,
+        //               color: const Color.fromRGBO(34, 43, 69, 1),
+        //               fontWeight: FontWeight.w400,
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        //   actions: [
+        //     Padding(
+        //       padding:
+        //           const EdgeInsets.only(top: 20.0, bottom: 10.0, right: 17.0),
+        //       child: Container(
+        //         height: 40.0,
+        //         width: 40.0,
+        //         decoration: BoxDecoration(
+        //           border: Border.all(
+        //             color: const Color.fromRGBO(241, 244, 247, 1),
+        //           ),
+        //           boxShadow: const [
+        //             BoxShadow(
+        //               blurRadius: 1.0,
+        //               color: Color.fromRGBO(0, 0, 0, 0.15),
+        //             ),
+        //           ],
+        //           color: Colors.white,
+        //           borderRadius: BorderRadius.circular(10.0),
+        //         ),
+        //         child: IconButton(
+        //           onPressed: () {},
+        //           icon: const Icon(
+        //             Icons.call_sharp,
+        //             color: Color.fromRGBO(34, 43, 69, 1),
+        //           ),
+        //           splashRadius: 1,
+        //         ),
+        //       ),
+        //     ),
+        //     Padding(
+        //       padding:
+        //           const EdgeInsets.only(top: 20.0, bottom: 10.0, right: 17.0),
+        //       child: Container(
+        //         height: 40.0,
+        //         width: 40.0,
+        //         decoration: BoxDecoration(
+        //           border: Border.all(
+        //             color: const Color.fromRGBO(241, 244, 247, 1),
+        //           ),
+        //           boxShadow: const [
+        //             BoxShadow(
+        //               blurRadius: 1.0,
+        //               color: Color.fromRGBO(0, 0, 0, 0.15),
+        //             ),
+        //           ],
+        //           color: Colors.white,
+        //           borderRadius: BorderRadius.circular(10.0),
+        //         ),
+        //         child: IconButton(
+        //           onPressed: () {},
+        //           icon: const Icon(
+        //             Icons.video_call_sharp,
+        //             color: Color.fromRGBO(34, 43, 69, 1),
+        //           ),
+        //           splashRadius: 1,
+        //         ),
+        //       ),
+        //     ),
+        //   ],
+        // ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -216,7 +343,7 @@ class _ChatpageState extends State<Chatpage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only( right: 10.0),
+                    padding: const EdgeInsets.only(right: 10.0),
                     child: IconButton(
                       onPressed: () {},
                       icon: const Icon(

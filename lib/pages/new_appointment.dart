@@ -73,6 +73,56 @@ class _NewAppointmentState extends State<NewAppointment> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
+        // appBar: AppBar(
+        //   elevation: 0,
+        //   toolbarHeight: 70.0,
+        //   centerTitle: true,
+        //   automaticallyImplyLeading: false,
+        //   backgroundColor: Colors.white,
+        //   leading: Padding(
+        //     padding: const EdgeInsets.only(top: 20.0, bottom: 10.0, left: 17.0),
+        //     child: Container(
+        //       height: 40.0,
+        //       width: 40.0,
+        //       decoration: BoxDecoration(
+        //         border: Border.all(
+        //           color: const Color.fromRGBO(241, 244, 247, 1),
+        //         ),
+        //         boxShadow: const [
+        //           BoxShadow(
+        //             blurRadius: 1.0,
+        //             color: Color.fromRGBO(0, 0, 0, 0.15),
+        //           ),
+        //         ],
+        //         color: Colors.white,
+        //         borderRadius: BorderRadius.circular(10.0),
+        //       ),
+        //       child: IconButton(
+        //         onPressed: () {
+        //           Navigator.pushNamed(context, MyRoutes.doctordetailRoute);
+        //         },
+        //         icon: const Icon(
+        //           Icons.arrow_back_sharp,
+        //           color: Color.fromRGBO(34, 43, 69, 1),
+        //         ),
+        //         splashRadius: 1,
+        //       ),
+        //     ),
+        //   ),
+        //   title: Padding(
+        //     padding: const EdgeInsets.only(top: 10.0),
+        //     child: Center(
+        //       child: Text(
+        //         "New Appointment",
+        //         style: GoogleFonts.poppins(
+        //           fontSize: 18.0,
+        //           color: const Color.fromRGBO(34, 43, 69, 1),
+        //           fontWeight: FontWeight.w400,
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        // ),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

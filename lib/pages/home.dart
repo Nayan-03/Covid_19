@@ -38,6 +38,64 @@ class _HomepageState extends State<Homepage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
+        // appBar: AppBar(
+        //   elevation: 0,
+        //   toolbarHeight: 80.0,
+        //   automaticallyImplyLeading: false,
+        //   backgroundColor: Colors.white,
+        //   title: Padding(
+        //     padding: const EdgeInsets.only(top: 25.0, left: 15.0),
+        //     child: Text(
+        //       "Welcome, Toluwani",
+        //       style: GoogleFonts.poppins(
+        //         fontSize: 15.0,
+        //         color: const Color.fromRGBO(34, 43, 69, 1),
+        //         fontWeight: FontWeight.w400,
+        //       ),
+        //     ),
+        //   ),
+        //   actions: [
+        //     Padding(
+        //       padding: const EdgeInsets.only(top: 30.0, bottom: 10.0),
+        //       child: Container(
+        //         height: 40.0,
+        //         width: 40.0,
+        //         decoration: BoxDecoration(
+        //           border: Border.all(
+        //             color: const Color.fromRGBO(241, 244, 247, 1),
+        //           ),
+        //           boxShadow: const [
+        //             BoxShadow(
+        //               blurRadius: 1.0,
+        //               color: Color.fromRGBO(0, 0, 0, 0.15),
+        //             ),
+        //           ],
+        //           color: Colors.white,
+        //           borderRadius: BorderRadius.circular(10.0),
+        //         ),
+        //         child: IconButton(
+        //           onPressed: () {},
+        //           icon: const Icon(
+        //             Icons.calendar_month,
+        //             color: Color.fromRGBO(34, 43, 69, 1),
+        //           ),
+        //           splashRadius: 1,
+        //         ),
+        //       ),
+        //     ),
+        //     Padding(
+        //       padding: const EdgeInsets.only(top: 30.0, right: 5.0),
+        //       child: IconButton(
+        //         splashRadius: 1,
+        //         onPressed: () {},
+        //         icon: const Icon(
+        //           Icons.more_vert,
+        //           color: Color.fromRGBO(34, 43, 69, 1),
+        //         ),
+        //       ),
+        //     ),
+        //   ],
+        // ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -249,9 +307,9 @@ class _HomepageState extends State<Homepage> {
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemCount: SpecialtyModel.specialty.length,
-                    itemBuilder: (context, index) =>SpecialtyWidget(
-                        specialty: SpecialtyModel.specialty[index],
-                      ),
+                    itemBuilder: (context, index) => SpecialtyWidget(
+                      specialty: SpecialtyModel.specialty[index],
+                    ),
                   ),
                 ),
               ),

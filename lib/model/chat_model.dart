@@ -12,8 +12,10 @@ class ChatModel {
     ),
     // Chat(
     //   id: 3,
-    //   message: "hello, doctor, i believe i have the coronavirus as i am experiencing mild symptoms, what do i do?",
-    //   sender: "I’m here for you, don’t worry. What symptoms are you experiencing?",
+    //   message:
+    //       "hello, doctor, i believe i have the coronavirus as i am experiencing mild symptoms, what do i do?",
+    //   sender:
+    //       "I’m here for you, don’t worry. What symptoms are you experiencing?",
     // )
   ];
 }
