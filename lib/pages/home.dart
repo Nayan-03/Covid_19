@@ -38,132 +38,132 @@ class _HomepageState extends State<Homepage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        // appBar: AppBar(
-        //   elevation: 0,
-        //   toolbarHeight: 80.0,
-        //   automaticallyImplyLeading: false,
-        //   backgroundColor: Colors.white,
-        //   title: Padding(
-        //     padding: const EdgeInsets.only(top: 25.0, left: 15.0),
-        //     child: Text(
-        //       "Welcome, Toluwani",
-        //       style: GoogleFonts.poppins(
-        //         fontSize: 15.0,
-        //         color: const Color.fromRGBO(34, 43, 69, 1),
-        //         fontWeight: FontWeight.w400,
-        //       ),
-        //     ),
-        //   ),
-        //   actions: [
-        //     Padding(
-        //       padding: const EdgeInsets.only(top: 30.0, bottom: 10.0),
-        //       child: Container(
-        //         height: 40.0,
-        //         width: 40.0,
-        //         decoration: BoxDecoration(
-        //           border: Border.all(
-        //             color: const Color.fromRGBO(241, 244, 247, 1),
-        //           ),
-        //           boxShadow: const [
-        //             BoxShadow(
-        //               blurRadius: 1.0,
-        //               color: Color.fromRGBO(0, 0, 0, 0.15),
-        //             ),
-        //           ],
-        //           color: Colors.white,
-        //           borderRadius: BorderRadius.circular(10.0),
-        //         ),
-        //         child: IconButton(
-        //           onPressed: () {},
-        //           icon: const Icon(
-        //             Icons.calendar_month,
-        //             color: Color.fromRGBO(34, 43, 69, 1),
-        //           ),
-        //           splashRadius: 1,
-        //         ),
-        //       ),
-        //     ),
-        //     Padding(
-        //       padding: const EdgeInsets.only(top: 30.0, right: 5.0),
-        //       child: IconButton(
-        //         splashRadius: 1,
-        //         onPressed: () {},
-        //         icon: const Icon(
-        //           Icons.more_vert,
-        //           color: Color.fromRGBO(34, 43, 69, 1),
-        //         ),
-        //       ),
-        //     ),
-        //   ],
-        // ),
+        appBar: AppBar(
+          elevation: 0,
+          toolbarHeight: 70.0,
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          title: Padding(
+            padding: const EdgeInsets.only(top: 15.0, left: 7.0),
+            child: Text(
+              "Welcome, Toluwani",
+              style: GoogleFonts.poppins(
+                fontSize: 15.0,
+                color: const Color.fromRGBO(34, 43, 69, 1),
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.homeRoute);
+                },
+                child: Container(
+                  height: 40.0,
+                  width: 40.0,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromRGBO(241, 244, 247, 1),
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        blurRadius: 1.0,
+                        color: Color.fromRGBO(0, 0, 0, 0.15),
+                      ),
+                    ],
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: const Icon(
+                    Icons.calendar_month_sharp,
+                    color: Color.fromRGBO(34, 43, 69, 1),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 10.0, top: 8.0, left: 10.0),
+              child: GestureDetector(
+                onTap: () {},
+                child: const Icon(
+                  Icons.more_vert,
+                  color: Color.fromRGBO(34, 43, 69, 1),
+                ),
+              ),
+            ),
+          ],
+        ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 30.0, left: 27.0),
-                    child: Text(
-                      "Welcome, Toluwani",
-                      style: GoogleFonts.poppins(
-                        fontSize: 15.0,
-                        color: const Color.fromRGBO(34, 43, 69, 1),
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 30.0, left: 130.0),
-                        child: Container(
-                          height: 40.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color.fromRGBO(241, 244, 247, 1),
-                            ),
-                            boxShadow: const [
-                              BoxShadow(
-                                blurRadius: 1.0,
-                                color: Color.fromRGBO(0, 0, 0, 0.15),
-                              ),
-                            ],
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.calendar_month,
-                              color: Color.fromRGBO(34, 43, 69, 1),
-                            ),
-                            splashRadius: 1,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          top: 30.0,
-                        ),
-                        child: IconButton(
-                          splashRadius: 1,
-                          onPressed: () {},
-                          icon: const Icon(Icons.more_vert),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 30.0, left: 27.0),
+              //       child: Text(
+              //         "Welcome, Toluwani",
+              //         style: GoogleFonts.poppins(
+              //           fontSize: 15.0,
+              //           color: const Color.fromRGBO(34, 43, 69, 1),
+              //           fontWeight: FontWeight.w400,
+              //         ),
+              //       ),
+              //     ),
+              //     Row(
+              //       children: [
+              //         Padding(
+              //           padding: const EdgeInsets.only(top: 30.0, left: 130.0),
+              //           child: Container(
+              //             height: 40.0,
+              //             width: 40.0,
+              //             decoration: BoxDecoration(
+              //               border: Border.all(
+              //                 color: const Color.fromRGBO(241, 244, 247, 1),
+              //               ),
+              //               boxShadow: const [
+              //                 BoxShadow(
+              //                   blurRadius: 1.0,
+              //                   color: Color.fromRGBO(0, 0, 0, 0.15),
+              //                 ),
+              //               ],
+              //               color: Colors.white,
+              //               borderRadius: BorderRadius.circular(10.0),
+              //             ),
+              //             child: IconButton(
+              //               onPressed: () {},
+              //               icon: const Icon(
+              //                 Icons.calendar_month,
+              //                 color: Color.fromRGBO(34, 43, 69, 1),
+              //               ),
+              //               splashRadius: 1,
+              //             ),
+              //           ),
+              //         ),
+              //         Padding(
+              //           padding: const EdgeInsets.only(
+              //             top: 30.0,
+              //           ),
+              //           child: IconButton(
+              //             splashRadius: 1,
+              //             onPressed: () {},
+              //             icon: const Icon(Icons.more_vert),
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ],
+              // ),
+              const SizedBox(height: 15.0),
               Padding(
-                padding:
-                    const EdgeInsets.only(left: 27.0, top: 15.0, right: 27.0),
+                padding: const EdgeInsets.only(left: 17.0, right: 17.0),
                 child: Container(
                   height: 463.0,
-                  width: 360.0,
+                  width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                       color: const Color.fromRGBO(62, 100, 255, 1),
                       borderRadius: BorderRadius.circular(25)),
@@ -194,17 +194,18 @@ class _HomepageState extends State<Homepage> {
                             ],
                           ),
                         ),
+                        const SizedBox(height: 127.0),
                         const Center(
                           child: Padding(
-                            padding: EdgeInsets.only(
-                                top: 127.0, left: 10.0, right: 30.0),
+                            padding: EdgeInsets.only(left: 10.0, right: 30.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20.0),
-                                  topRight: Radius.circular(20.0)),
+                                topLeft: Radius.circular(20.0),
+                                topRight: Radius.circular(20.0),
+                              ),
                               child: Image(
                                 height: 160.0,
-                                width: 300.0,
+                                width: 320.0,
                                 image:
                                     AssetImage("assets/images/healthcare.png"),
                                 fit: BoxFit.cover,
@@ -221,10 +222,10 @@ class _HomepageState extends State<Homepage> {
                 height: 20.0,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, right: 27.0),
+                padding: const EdgeInsets.only(left: 17.0, right: 17.0),
                 child: Container(
                   height: 80.0,
-                  width: 360.0,
+                  width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: const Color.fromRGBO(107, 119, 154, 0.05),
@@ -245,29 +246,31 @@ class _HomepageState extends State<Homepage> {
                         ),
                         trailing: Padding(
                           padding: const EdgeInsets.only(top: 14.0),
-                          child: Container(
-                            height: 40.0,
-                            width: 40.0,
-                            decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  blurRadius: 1.0,
-                                  color: Color.fromRGBO(0, 0, 0, 0.15),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, MyRoutes.doctorRoute);
+                            },
+                            child: Container(
+                              height: 40.0,
+                              width: 40.0,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: const Color.fromRGBO(241, 244, 247, 1),
                                 ),
-                              ],
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(
-                                    context, MyRoutes.doctorRoute);
-                              },
-                              icon: const Icon(
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 1.0,
+                                    color: Color.fromRGBO(0, 0, 0, 0.15),
+                                  ),
+                                ],
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                              child: const Icon(
                                 Icons.arrow_forward_sharp,
                                 color: Color.fromRGBO(34, 43, 69, 1),
                               ),
-                              splashRadius: 1,
                             ),
                           ),
                         ),
@@ -286,8 +289,9 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
               ),
+              const SizedBox(height: 20.0),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, top: 20.0),
+                padding: const EdgeInsets.only(left: 17.0),
                 child: Text(
                   "Specialty 😷",
                   style: GoogleFonts.poppins(
@@ -297,9 +301,9 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
               ),
+              const SizedBox(height: 20.0),
               Padding(
-                padding:
-                    const EdgeInsets.only(top: 20.0, left: 27.0, bottom: 20.0),
+                padding: const EdgeInsets.only(left: 17.0, bottom: 20.0),
                 child: SizedBox(
                   height: 133.0,
                   width: MediaQuery.of(context).size.width,

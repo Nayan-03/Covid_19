@@ -73,115 +73,112 @@ class _NewAppointmentState extends State<NewAppointment> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        // appBar: AppBar(
-        //   elevation: 0,
-        //   toolbarHeight: 70.0,
-        //   centerTitle: true,
-        //   automaticallyImplyLeading: false,
-        //   backgroundColor: Colors.white,
-        //   leading: Padding(
-        //     padding: const EdgeInsets.only(top: 20.0, bottom: 10.0, left: 17.0),
-        //     child: Container(
-        //       height: 40.0,
-        //       width: 40.0,
-        //       decoration: BoxDecoration(
-        //         border: Border.all(
-        //           color: const Color.fromRGBO(241, 244, 247, 1),
-        //         ),
-        //         boxShadow: const [
-        //           BoxShadow(
-        //             blurRadius: 1.0,
-        //             color: Color.fromRGBO(0, 0, 0, 0.15),
-        //           ),
-        //         ],
-        //         color: Colors.white,
-        //         borderRadius: BorderRadius.circular(10.0),
-        //       ),
-        //       child: IconButton(
-        //         onPressed: () {
-        //           Navigator.pushNamed(context, MyRoutes.doctordetailRoute);
-        //         },
-        //         icon: const Icon(
-        //           Icons.arrow_back_sharp,
-        //           color: Color.fromRGBO(34, 43, 69, 1),
-        //         ),
-        //         splashRadius: 1,
-        //       ),
-        //     ),
-        //   ),
-        //   title: Padding(
-        //     padding: const EdgeInsets.only(top: 10.0),
-        //     child: Center(
-        //       child: Text(
-        //         "New Appointment",
-        //         style: GoogleFonts.poppins(
-        //           fontSize: 18.0,
-        //           color: const Color.fromRGBO(34, 43, 69, 1),
-        //           fontWeight: FontWeight.w400,
-        //         ),
-        //       ),
-        //     ),
-        //   ),
-        // ),
+        appBar: AppBar(
+          elevation: 0,
+          toolbarHeight: 70.0,
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          leading: Padding(
+            padding: const EdgeInsets.only(top: 20.0, left: 17.0, bottom: 10.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.doctordetailRoute);
+              },
+              child: Container(
+                height: 40.0,
+                width: 40.0,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromRGBO(241, 244, 247, 1),
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      blurRadius: 1.0,
+                      color: Color.fromRGBO(0, 0, 0, 0.15),
+                    ),
+                  ],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: const Icon(
+                  Icons.arrow_back_sharp,
+                  color: Color.fromRGBO(34, 43, 69, 1),
+                ),
+              ),
+            ),
+          ),
+          title: Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Text(
+              "New Appointment",
+              style: GoogleFonts.poppins(
+                fontSize: 18.0,
+                color: const Color.fromRGBO(34, 43, 69, 1),
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 38.0, left: 27.0),
-                    child: Container(
-                      height: 40.0,
-                      width: 40.0,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: const Color.fromRGBO(241, 244, 247, 1),
-                        ),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 1.0,
-                            color: Color.fromRGBO(0, 0, 0, 0.15),
-                          ),
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: IconButton(
-                        onPressed: () {
-                          Navigator.pushNamed(
-                              context, MyRoutes.doctordetailRoute);
-                        },
-                        icon: const Icon(
-                          Icons.arrow_back_sharp,
-                          color: Color.fromRGBO(34, 43, 69, 1),
-                        ),
-                        splashRadius: 1,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 48.0, left: 85.0),
-                    child: Center(
-                      child: Text(
-                        "New Appointment",
-                        style: GoogleFonts.poppins(
-                          fontSize: 18.0,
-                          color: const Color.fromRGBO(34, 43, 69, 1),
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   crossAxisAlignment: CrossAxisAlignment.start,
+              //   children: [
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 38.0, left: 27.0),
+              //       child: Container(
+              //         height: 40.0,
+              //         width: 40.0,
+              //         decoration: BoxDecoration(
+              //           border: Border.all(
+              //             color: const Color.fromRGBO(241, 244, 247, 1),
+              //           ),
+              //           boxShadow: const [
+              //             BoxShadow(
+              //               blurRadius: 1.0,
+              //               color: Color.fromRGBO(0, 0, 0, 0.15),
+              //             ),
+              //           ],
+              //           color: Colors.white,
+              //           borderRadius: BorderRadius.circular(10.0),
+              //         ),
+              //         child: IconButton(
+              //           onPressed: () {
+              //             Navigator.pushNamed(
+              //                 context, MyRoutes.doctordetailRoute);
+              //           },
+              //           icon: const Icon(
+              //             Icons.arrow_back_sharp,
+              //             color: Color.fromRGBO(34, 43, 69, 1),
+              //           ),
+              //           splashRadius: 1,
+              //         ),
+              //       ),
+              //     ),
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 48.0, left: 85.0),
+              //       child: Center(
+              //         child: Text(
+              //           "New Appointment",
+              //           style: GoogleFonts.poppins(
+              //             fontSize: 18.0,
+              //             color: const Color.fromRGBO(34, 43, 69, 1),
+              //             fontWeight: FontWeight.w400,
+              //           ),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               Column(
                 children: [
-                  const SizedBox(height: 30.0),
+                  const SizedBox(height: 10.0),
                   Padding(
-                    padding: const EdgeInsets.only(left: 27.0),
+                    padding: const EdgeInsets.only(left: 17.0),
                     child: Row(
                       children: [
                         Text(
@@ -201,7 +198,7 @@ class _NewAppointmentState extends State<NewAppointment> {
                   ),
                   const SizedBox(height: 10.0),
                   Padding(
-                    padding: const EdgeInsets.only(left: 27.0),
+                    padding: const EdgeInsets.only(left: 17.0),
                     child: DatePicker(
                       DateTime.now(),
                       height: 100.0,
@@ -232,7 +229,7 @@ class _NewAppointmentState extends State<NewAppointment> {
               heading1(h1[0]),
               const SizedBox(height: 21.0),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0),
+                padding: const EdgeInsets.only(left: 17.0),
                 child: SizedBox(
                   height: 40,
                   width: MediaQuery.of(context).size.width,
@@ -254,7 +251,7 @@ class _NewAppointmentState extends State<NewAppointment> {
 
               const SizedBox(height: 8.0),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, right: 27.0),
+                padding: const EdgeInsets.only(left: 17.0, right: 17.0),
                 child: TextFormField(
                   keyboardType: TextInputType.name,
                   cursorColor: Colors.black,
@@ -279,7 +276,7 @@ class _NewAppointmentState extends State<NewAppointment> {
 
               const SizedBox(height: 8.0),
               Padding(
-                  padding: const EdgeInsets.only(left: 27.0, right: 27.0),
+                  padding: const EdgeInsets.only(left: 17.0, right: 17.0),
                   child:
 
                       // ListView(
@@ -475,7 +472,7 @@ class _NewAppointmentState extends State<NewAppointment> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 27.0),
+                    padding: const EdgeInsets.only(left: 17.0),
                     child: Center(
                       child: GestureDetector(
                         onTap: () {
@@ -559,7 +556,7 @@ class _NewAppointmentState extends State<NewAppointment> {
 
               const SizedBox(height: 8.0),
               Padding(
-                padding: const EdgeInsets.only(left: 27.0, right: 27.0),
+                padding: const EdgeInsets.only(left: 17.0, right: 17.0),
                 child: TextField(
                   keyboardType: TextInputType.text,
                   cursorColor: Colors.black,
@@ -588,13 +585,13 @@ class _NewAppointmentState extends State<NewAppointment> {
               const SizedBox(height: 62.0),
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 25.0, right: 27.0, bottom: 30.0),
+                    left: 17.0, right: 17.0, bottom: 30.0),
                 child: InkWell(
                   onTap: () =>
                       Navigator.pushNamed(context, MyRoutes.chatpageRoute),
                   child: Container(
                     height: 60.0,
-                    width: 360.0,
+                    width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
                       color: const Color.fromRGBO(62, 100, 255, 1),
@@ -622,7 +619,7 @@ class _NewAppointmentState extends State<NewAppointment> {
 
 Widget heading2(String h2) {
   return Padding(
-    padding: const EdgeInsets.only(left: 27.0),
+    padding: const EdgeInsets.only(left: 17.0),
     child: Text(
       h2,
       style: GoogleFonts.poppins(
@@ -636,7 +633,7 @@ Widget heading2(String h2) {
 
 Widget heading1(String h1) {
   return Padding(
-    padding: const EdgeInsets.only(left: 27.0),
+    padding: const EdgeInsets.only(left: 17.0),
     child: Text(
       h1,
       style: GoogleFonts.poppins(

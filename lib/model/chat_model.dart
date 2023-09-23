@@ -2,13 +2,13 @@ class ChatModel {
   static List<Chat> chat = [
     Chat(
       id: 1,
-      message: "Hello!",
-      sender: "hii",
+      message: "hello, doctor, i believe i have the coronavirus as i am experiencing mild symptoms, what do i do?",
+      sender: "I’m here for you, don’t worry. What symptoms are you experiencing?",
     ),
     Chat(
       id: 2,
-      message: "How are you?",
-      sender: "I'm fine.",
+      message: "fever dry cough tiredness sore throat",
+      sender: "oh so sorry about that. do you have any underlying diseases?",
     ),
     // Chat(
     //   id: 3,
