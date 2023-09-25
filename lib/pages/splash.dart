@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:async';
 
 import 'package:covid_19/pages/home.dart';
@@ -14,11 +16,23 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    //_navigatorhome();
     Timer(
-        const Duration(seconds: 3),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const Homepage())));
+      const Duration(seconds: 2),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const Homepage(),
+        ),
+      ),
+    );
   }
+
+  // _navigatorhome() async {
+  //   await Future.delayed( const Duration(seconds: 2), () {});
+  //   Navigator.pushReplacement(
+  //       context, MaterialPageRoute(builder: (context) => const Homepage()));
+  // }
 
   @override
   Widget build(BuildContext context) {

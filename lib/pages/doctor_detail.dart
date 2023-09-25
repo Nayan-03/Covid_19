@@ -208,9 +208,9 @@ class _DoctorDetailpageState extends State<DoctorDetailpage> {
                       children: [
                         const SizedBox(width: 17.0),
                         card(number[0], catagory[0], image[0], color1[0]),
-                        const SizedBox(width: 15.0),
+                        const SizedBox(width: 17.5),
                         card(number[1], catagory[1], image[1], color1[1]),
-                        const SizedBox(width: 15.0),
+                        const SizedBox(width: 17.5),
                         card(number[2], catagory[2], image[2], color1[2])
                       ],
                     ),

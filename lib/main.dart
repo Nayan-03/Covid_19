@@ -21,9 +21,10 @@ class MyApp extends StatelessWidget {
         title: 'Covid-19',
         theme: ThemeData(
             primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
-        initialRoute: MyRoutes.splashroute,
+        //initialRoute: MyRoutes.splashroute,
+        home: const NewAppointment(),
         routes: {
-          "/": (context) => const SplashScreen(),
+          //"/": (context) => const SplashScreen(),
           MyRoutes.splashroute: (context) => const SplashScreen(),
           MyRoutes.homeRoute: (context) => const Homepage(),
           MyRoutes.doctorRoute: (context) => const Doctorpage(),
