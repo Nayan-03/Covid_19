@@ -1,8 +1,10 @@
 import 'dart:convert';
 
 import 'package:covid_19/model/appointment_model.dart';
+
 import 'package:covid_19/utills/routes.dart';
 import 'package:covid_19/widget/appoitment_widget.dart';
+
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -23,7 +25,12 @@ class _NewAppointmentState extends State<NewAppointment> {
   bool visibilitycolor = true;
 
   List<String> h1 = ["Available time", "Patient Details"];
-  List<String> h2 = ["Full name", "Age", "Gender", "Write your problem",];
+  List<String> h2 = [
+    "Full name",
+    "Age",
+    "Gender",
+    "Write your problem",
+  ];
 
   final List<String> age = [
     '16 - 20',
@@ -33,6 +40,24 @@ class _NewAppointmentState extends State<NewAppointment> {
     '36 - 40',
     '41 - 50',
     '51 - 60',
+  ];
+
+  final List<String> time = [
+    "09:00 AM",
+    "09:30 AM",
+    "10:00 AM",
+    "10:30 AM",
+    "11:00 AM",
+    "12:00 PM",
+    "12:30 PM",
+    "01:30 PM",
+    "02:00 PM",
+    "02:30 PM",
+    "03:00 PM",
+    "04:30 PM",
+    "05:00 PM",
+    "05:30 PM",
+    "06:00 PM"
   ];
 
   @override
@@ -106,7 +131,6 @@ class _NewAppointmentState extends State<NewAppointment> {
         ),
         body: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Row(
@@ -182,7 +206,7 @@ class _NewAppointmentState extends State<NewAppointment> {
                   ),
                   const SizedBox(height: 10.0),
                   Padding(
-                    padding: const EdgeInsets.only(left: 17.0),
+                    padding: const EdgeInsets.only(left: 17.0, right: 17.0),
                     child: DatePicker(
                       DateTime.now(),
                       height: 100.0,
@@ -209,26 +233,45 @@ class _NewAppointmentState extends State<NewAppointment> {
                   ),
                 ],
               ),
+/////////////////////////////////////////////////
               const SizedBox(height: 27.0),
               heading1(h1[0]),
-              // const SizedBox(height: 20.0),
               Padding(
                 padding: const EdgeInsets.only(left: 17, top: 20, right: 17),
                 child: SizedBox(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
-                  child: ListView.builder(
+                  height: 140.0,
+                  child: GridView.builder(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        crossAxisSpacing: 10.0,
+                        mainAxisSpacing: 10.0,
+                        mainAxisExtent: 100.0),
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
-                    itemCount: AppointmentModel.appointment.length,
+                    itemCount: 12,
                     itemBuilder: (context, index) {
-                      return AppointmentWidget(
-                        appointment: AppointmentModel.appointment[index],
-                      );
+                      return const AppointmentWidget();
                     },
                   ),
                 ),
               ),
+/////////////////////////////////////////
+              // SizedBox(
+              //   height: 60,
+              //   width: MediaQuery.of(context).size.width,
+              //   child: ListView.builder(
+              //     scrollDirection: Axis.horizontal,
+              //     shrinkWrap: true,
+              //     itemCount: AppointmentModel.appointment.length,
+              //     itemBuilder: (context, index) {
+              //       return AppointmentWidget(
+              //         appointment: AppointmentModel.appointment[index],
+              //       );
+              //     },
+              //   ),
+              // ),
+              // ),
+//////////////////////////////////////////////////////
               const SizedBox(height: 32.0),
               heading1(h1[1]),
               const SizedBox(height: 18.0),
