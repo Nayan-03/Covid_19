@@ -182,56 +182,52 @@ class _NewAppointmentState extends State<NewAppointment> {
               //     ),
               //   ],
               // ),
-              Column(
-                children: [
-                  const SizedBox(height: 10.0),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.0),
-                    child: Row(
-                      children: [
-                        Text(
-                          DateFormat.yMMM().format(DateTime.now()),
-                          style: GoogleFonts.poppins(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w500,
-                              color: const Color.fromRGBO(34, 43, 69, 1)),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.arrow_drop_down_sharp),
-                          splashRadius: 1.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 10.0),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.0, right: 17.0),
-                    child: DatePicker(
-                      DateTime.now(),
-                      height: 100.0,
-                      width: 80.0,
-                      initialSelectedDate: DateTime.now(),
-                      selectionColor: const Color.fromRGBO(62, 100, 255, 1),
-                      selectedTextColor: Colors.white,
-                      dateTextStyle: GoogleFonts.poppins(
-                          fontSize: 22.0,
+              const SizedBox(height: 10.0),
+              Padding(
+                padding: const EdgeInsets.only(left: 17.0),
+                child: Row(
+                  children: [
+                    Text(
+                      DateFormat.yMMM().format(DateTime.now()),
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
                           fontWeight: FontWeight.w500,
-                          color: const Color.fromRGBO(107, 119, 154, 1)),
-                      dayTextStyle: GoogleFonts.poppins(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w400,
-                          color: const Color.fromRGBO(107, 119, 154, 1)),
-                      monthTextStyle: GoogleFonts.poppins(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w400,
-                          color: const Color.fromRGBO(107, 119, 154, 1)),
-                      onDateChange: (date) {
-                        selectedDate = date;
-                      },
+                          color: const Color.fromRGBO(34, 43, 69, 1)),
                     ),
-                  ),
-                ],
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.arrow_drop_down_sharp),
+                      splashRadius: 1.0,
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 10.0),
+              Padding(
+                padding: const EdgeInsets.only(left: 17.0, right: 17.0),
+                child: DatePicker(
+                  DateTime.now(),
+                  height: 100.0,
+                  width: 80.0,
+                  initialSelectedDate: DateTime.now(),
+                  selectionColor: const Color.fromRGBO(62, 100, 255, 1),
+                  selectedTextColor: Colors.white,
+                  dateTextStyle: GoogleFonts.poppins(
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w500,
+                      color: const Color.fromRGBO(107, 119, 154, 1)),
+                  dayTextStyle: GoogleFonts.poppins(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w400,
+                      color: const Color.fromRGBO(107, 119, 154, 1)),
+                  monthTextStyle: GoogleFonts.poppins(
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w400,
+                      color: const Color.fromRGBO(107, 119, 154, 1)),
+                  onDateChange: (date) {
+                    selectedDate = date;
+                  },
+                ),
               ),
 /////////////////////////////////////////////////
               const SizedBox(height: 27.0),
@@ -241,11 +237,12 @@ class _NewAppointmentState extends State<NewAppointment> {
                 child: SizedBox(
                   height: 140.0,
                   child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: 10.0,
-                        mainAxisSpacing: 10.0,
-                        mainAxisExtent: 100.0),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            crossAxisSpacing: 10.0,
+                            mainAxisSpacing: 10.0,
+                            mainAxisExtent: 100.0),
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemCount: 12,

@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
         //initialRoute: MyRoutes.splashroute,
-        home: const NewAppointment(),
+        home: const SplashScreen(),
         routes: {
           //"/": (context) => const SplashScreen(),
           MyRoutes.splashroute: (context) => const SplashScreen(),

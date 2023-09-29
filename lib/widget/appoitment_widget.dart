@@ -1,4 +1,3 @@
-import 'package:covid_19/model/appointment_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

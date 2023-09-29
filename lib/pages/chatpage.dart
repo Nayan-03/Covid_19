@@ -141,14 +141,17 @@ class _ChatpageState extends State<Chatpage> {
             ),
           ],
         ),
-        body: ListView.builder(
-          padding: const EdgeInsets.only(
-              top: 20.0, left: 16.0, right: 16.0, bottom: 15.0),
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          itemCount: ChatModel.chat.length,
-          itemBuilder: (context, index) => ChatWidget(
-            chat: ChatModel.chat[index],
+        body: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          child: ListView.builder(
+            padding: const EdgeInsets.only(
+                top: 20.0, left: 16.0, right: 16.0, bottom: 15.0),
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+            itemCount: ChatModel.chat.length,
+            itemBuilder: (context, index) => ChatWidget(
+              chat: ChatModel.chat[index],
+            ),
           ),
         ),
         bottomSheet: Container(

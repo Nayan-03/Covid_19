@@ -35,7 +35,6 @@ class _ChatWidgetState extends State<ChatWidget> {
                   color: const Color.fromRGBO(107, 119, 154, 1),
                 ),
               ),
-              
             ),
           ),
         ),
